@@ -14,7 +14,7 @@ dependencyResolutionManagement {
 }
 
 rootProject.name = "MAD Lab"
-include(":c1a1")
-include(":c1a2")
-include(":c1a3")
-include(":c2a3")
+include(":CO1:app1")
+include(":CO1:app2")
+include(":CO1:app3")
+include(":CO2:app3")
