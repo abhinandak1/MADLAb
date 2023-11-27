@@ -5,18 +5,21 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
     boolean op = true;
     String oper = "+";
     String old = "";
-    EditText number;
+    TextView number;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        number = (EditText) findViewById(R.id.number);
+        number = findViewById(R.id.editTextResult);
+
+        NumberEvent(getWindow().getDecorView());
     }
     public void NumberEvent(View view){
         if(op){

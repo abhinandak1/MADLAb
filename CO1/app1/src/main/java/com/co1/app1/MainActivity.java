@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
             String name = username.getText().toString();
             String pass = password.getText().toString();
 
-            if (name.equals("admin") && pass.equals("adminn")) {
+            if (name.equals("admin") && pass.equals("admin")) {
                 Toast.makeText(MainActivity.this, "Login Success", Toast.LENGTH_SHORT).show();
             } else {
                 Toast.makeText(MainActivity.this, "Login Failed", Toast.LENGTH_SHORT).show();
