@@ -1,9 +1,11 @@
 package com.co5.app1_2;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import android.annotation.SuppressLint;
 import android.database.Cursor;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.ContextMenu;
 import android.view.MenuItem;
 import android.view.View;
@@ -44,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
                     .setView(customView)
                     .setPositiveButton("Insert", (dialog, which) -> {
                         EditText etName = customView.findViewById(R.id.et_name);
-                        if (!etName.getText().toString().equals("")) {
+                        if (!TextUtils.isEmpty(etName.getText().toString())) {
                             dbHelper.insertData(etName.getText().toString().trim());
                             dataList.add(etName.getText().toString().trim());
                             if (!dataList.isEmpty()) {
